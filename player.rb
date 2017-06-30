@@ -30,8 +30,12 @@ def do_battle(damage)
   end
 
   def restart
+    @gold_coins = 0
+    @health_points = 10
+    @lives = 5
   end
 
 end
   puts mo = Player.new
   puts mo.level_up
+  puts mo.collection_treasure
