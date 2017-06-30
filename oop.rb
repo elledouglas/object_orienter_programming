@@ -3,25 +3,25 @@ class BankAccount
 
   def initialize
     @balance = balance
-    @total_balance = total_balance
+    @total_balance = 0
   end
 
 
   def balance
-    @balance = total_balance
+    @balance = @total_balance
   end
 
 
   def interst_rate
-    interst_rate = total_balance * 5.0
+    @total_balance * 5.0
   end
 
   def deposit(amount)
-  deposit = amount + total_balance
+  @total_balance = @total_balance + amount
   end
 
   def withdraw(amount)
-    withdraw = total_balance - amount
+    @total_balance = @total_balance + amount
   end
 
 #   amount
@@ -29,9 +29,8 @@ class BankAccount
 #   withdraw
 # gain_interst
 
-
-
 end
 
-account = BankAccount.new
-account.balance
+puts account = BankAccount.new
+puts account.deposit(100)
+puts @total_balance

@@ -1,33 +1,37 @@
 class Player
 
   def initialize
-    @gold_coins = gold_coins
-    @health_points = health_points
-    @lives = lives
+    @gold_coins = 0
+    @health_points = 10
+    @lives = 5
   end
 
-lives = 5
-gold_coins = 0
-health_points = 10
-end
+# lives = 5
+# gold_coins = 0
+# health_points = 10
+# end
 
 
 def level_up
-  @lives = lives += 1
+  @lives += 1
 end
 
 def collection_treasure
-  @gold_coins = gold_coins += 1
-end
+  @gold_coins += 1
+
   if @gold_coins % 10
-  level_up  << gold_coins NOT SHOVEL
+     level_up
 
 end
+end
 
-def do_batle(damage)
-    damage -= health_points
+def do_battle(damage)
+    @health_points = @health_points - damage
   end
-  if health_points < 1
-    lives = lives - 1
-    @health_points = 10
-    ejd 
+
+  def restart
+  end
+
+end
+  puts mo = Player.new
+  puts mo.level_up
